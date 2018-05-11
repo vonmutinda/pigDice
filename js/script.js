@@ -18,14 +18,14 @@ $(document).ready(function(){
          players.secondPlayer = $().val();
 
     // hide age section display playground
-        $().toggle();
-        $().show();
+        $('.login').toggle();
+        $('#playground').show();
 
 
     // load names of players
     if(firstPlayer!== '' && secondPlayer!=''){
-        $().append();
-        $().append();
+        $('#userwan').append(players.firstPlayer);
+        $('#usertoo').append(players.secondPlayer);
     }else{
         $().append(defaults.playerOne);
         $().append(defaults.playerTwo);
@@ -44,6 +44,12 @@ $(document).ready(function(){
     });
 
 
+
+
+    //animating the roll button
+    $('#roll').click(function(){
+        $('.roll').toggleClass('animating');
+    });
 
 
 });

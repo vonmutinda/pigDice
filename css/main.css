@@ -34,15 +34,26 @@ body{
 }
 
 .profile{
-    width: 200px;
+    width: 250px;
     height: 250px;
 }
 
 /* GAME SECTION */
-#roll{
+.roll{
     background-image: url('../assets/roll.png');
-    height: 40px;
-    width: 40px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    height: 150px;
+    width: 150px;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%,
+    -47.5%);
+    -webkit-transform: translate(-50%, -47.5%);
+    transform: translate(-50%,
+    -47.5%);
+    padding-left: 100px;
 }
 
 
@@ -86,4 +97,22 @@ footer span{
 
 .terms , .conds{
     background: #27AE60;
+}
+
+
+/* EFFECTS */
+@keyframes roll-burst {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}
+
+.roll {
+    animation: roll-burst 1s infinity;
+}
+.animating{
+    animation: roll-burst .8s steps(28) 1;
 }
