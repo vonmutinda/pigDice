@@ -4,13 +4,47 @@ body{
 
 
 /* AGE SELECTION */
+.login{
+    display: none;
 
+}
 
 
 
 
 /* HEADER */
+.welkom{
+    width: 100%;
+}
 
+.field{
+    padding-top: 2%;
+
+}
+
+.tagline{
+    padding:50px;
+    background-image: url("../assets/backgrounds/bfOne.jpg");
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border-radius: 30px;
+
+}
+
+.profile{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+/* RESULT SECTION */
+ul{
+    list-style-type: none;
+    padding: 10px;
+}
 
 
 
