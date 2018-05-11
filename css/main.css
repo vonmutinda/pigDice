@@ -35,10 +35,15 @@ body{
 
 .profile{
     width: 200px;
-    height: 200px;
+    height: 250px;
 }
 
 /* GAME SECTION */
+#roll{
+    background-image: url('../assets/roll.png');
+    height: 40px;
+    width: 40px;
+}
 
 
 /* RESULT SECTION */
@@ -50,3 +55,35 @@ ul{
 
 
 /* FOOTER */
+footer{
+    height: 300px;
+}
+
+footer span{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.social h2{
+    text-align: center;
+    padding: 30px;
+    background: #2C3E50;
+    color: white;
+}
+
+.social div{
+    text-align: center;
+    height: 50px;
+}
+
+.terms{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+.terms , .conds{
+    background: #27AE60;
+}
