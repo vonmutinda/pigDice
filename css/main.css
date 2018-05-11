@@ -18,7 +18,6 @@ body{
 }
 
 .field{
-    padding-top: 2%;
 
 }
 
@@ -29,13 +28,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    border-radius: 30px;
 
 }
 
 .profile{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 /* GAME SECTION */
@@ -55,6 +53,13 @@ body{
     -47.5%);
     padding-left: 100px;
 }
+
+#dice{
+    height: 200px;
+    width: 200px;
+}
+
+
 
 
 /* RESULT SECTION */

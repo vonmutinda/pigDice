@@ -4,6 +4,9 @@ $(document).ready(function(){
         
     }
 
+    function Players(name){
+        this.name=name;
+    }
 
     let players = {
         defaults : {
@@ -38,9 +41,17 @@ $(document).ready(function(){
 //roll dice
     $('#roll').click(function(){
         let score = Math.floor((Math.random() * 6) + 1);
+
+
+        if(score==1){
+
+        }
         $('#score').append(score);
         $('ul#resultOne').append('<li>'+score+'</li>');
-        score +=score;
+       
+        
+    // clear your score
+        $('#score').text('');
     });
 
 
