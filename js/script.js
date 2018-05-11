@@ -36,17 +36,18 @@ $(document).ready(function(){
     });
 
 //roll dice
-    $().click(function(){
+    $('#roll').click(function(){
         let score = Math.floor((Math.random() * 6) + 1);
-        $().append(score);
-
+        $('#score').append(score);
+        $('ul#resultOne').append('<li>'+score+'</li>');
         score +=score;
     });
 
 
 
 
-    //animating the roll button
+
+//animating the roll button
     $('#roll').click(function(){
         $('.roll').toggleClass('animating');
     });
