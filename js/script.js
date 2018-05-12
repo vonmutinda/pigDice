@@ -10,27 +10,37 @@ let outcome = 0;
         let play = new Dice();
 
         let score = parseInt(play.roll());
+        outcome += score;
 
         console.log(score);
+        spit(outcome);
 
         if (score > 1) {
-            outcome += score;
-
-            $('#score').append(score);
+            clear('#score');
+            $('#score').append(score+"<br>");
             if (outcome === play.win) {
                 alert('Woooow ! You Win!');
-            }
-        } else {
-            alert('Oops ! You Rolled 1');
-            $('.roll').toggleClass('animating');
-            $('#score').text('');
+            } 
         }
-
+        else {
+            $('#score').text('');
+            outcome = 0;
+            $('#antenna').text('0');
+            $('#score').append("Ooops ! You rolled 1");
+            $('.roll').toggleClass('animating');
+        }
         spin(score);
         
     });
+    
+    $().click(function(){
+        
+    });
 
-    $
+
+
+
+
 
 
 
@@ -45,6 +55,39 @@ function Dice() {
     }
 
 }
+
+
+
+function Players(firstPlayer, secondPlayer) {
+    this.firstPlayer = firstPlayer;
+    this.secondPlayer = secondPlayer;
+    this.theDefaults = {
+        fhirst: 'vonMUTINDA',
+        second: 'bERYLnYAMOSI'
+    }
+}
+
+//function clear 
+
+function clear(where){
+    $(where).text('');
+}
+
+function cleared(){
+
+}
+
+
+
+
+//calculator
+function spit(calc){
+    clear('#antenna');
+    $('#antenna').append(calc);
+
+}
+
+
 
 //spin images 
 function spin(score) {
@@ -65,14 +108,9 @@ function spin(score) {
 
 }
 
-function Players(firstPlayer, secondPlayer) {
-    this.firstPlayer = firstPlayer;
-    this.secondPlayer = secondPlayer;
-    this.theDefaults = {
-        fhirst: 'vonMUTINDA',
-        second: 'bERYLnYAMOSI'
-    }
-}
+
+
+
 
 // EVENT LISTENERS
 

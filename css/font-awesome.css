@@ -115,11 +115,11 @@
 }
 
 .fa-spin {
-    -webkit-animation: fa-spin .2s  infinity;
-    -moz-animation: fa-spin .2s infinity;
-    -o-animation: fa-spin .2s infinity;
-    -ms-animation: fa-spin .2s infinity;
-    animation: fa-spin .2s  infinity;
+    -webkit-animation: fa-spin .2s  linear;
+    -moz-animation: fa-spin .2s linear;
+    -o-animation: fa-spin .2s linear;
+    -ms-animation: fa-spin .2s linear;
+    animation: fa-spin .2s  linear;
 }
 
 

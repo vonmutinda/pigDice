@@ -174,5 +174,5 @@ ul{
     animation: roll-burst 1s infinity;
 }
 .animating{
-    animation: roll-burst .2s steps(28) 10;
+    animation: roll-burst .2s steps(28) 5;
 }
