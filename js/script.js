@@ -6,6 +6,8 @@ let outcome = 0;
 
 
 //GAME
+
+//player One
     $('#roll').click(function(){
         let play = new Dice();
 
@@ -19,7 +21,7 @@ let outcome = 0;
             clear('#score');
             $('#score').append(score+"<br>");
             if (outcome === play.win) {
-                alert(score+': Woooow ! You Win!');
+                alert(outcome+': Woooow ! You Win!');
             } 
         }
         else {
@@ -32,8 +34,31 @@ let outcome = 0;
         spin(score);
         
     });
-    
-    $().click(function(){
+//player Two
+    $('#btnRoll').click(function(){
+        let nextPlay = new Dice();
+
+        let score = parseInt(play.roll());
+        outcome += score;
+
+        console.log(score);
+        spit(outcome);
+
+        if (score > 1) {
+            clear('#scored');
+            $('#score').append(score + "<br>");
+            if (outcome === nextPlay.win) {
+                alert(outcome + ': Woooow ! You Win!');
+            }
+        }
+        else {
+            clear('#score');
+            outcome = 0;
+            $('#aerial').text('0');
+            $('#scored').append("Ooops ! You rolled 1");
+            $('.roll').toggleClass('animating');
+        }
+        spin(score);
 
     });
 
@@ -94,18 +119,30 @@ function spin(score) {
 
     if (score === 1) {
         $('.one').toggleClass('fa-spin').removeClass('fa-spin');
+        removeSpin(".one");
     } else if (score === 2) {
         $('.two').toggleClass('fa-spin');
+        removeSpin(".two");
     } else if (score === 3) {
         $('.three').toggleClass('fa-spin');
+        removeSpin(".three");
     } else if (score === 4) {
         $('.four').toggleClass('fa-spin');
+        removeSpin(".four");
     } else if (score === 5) {
         $('.five').toggleClass('fa-spin');
+        removeSpin(".five");
     } else {
-        $('.six').toggleClass('fa-spin');
+        $('.six').addClass('fa-spin');
+        removeSpin(".six");
     }
 
+}
+
+//remove spin
+
+function removeSpin(which){
+    $(which).removeClass('.fa-spin');
 }
 
 

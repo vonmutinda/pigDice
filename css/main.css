@@ -18,6 +18,8 @@ body{
 
 .ground{
     padding: 10px;
+    padding-left: 20px;
+    
 }
 
 .names{
@@ -77,7 +79,7 @@ body{
     background-size: 2900%;
     height: 150px;
     width: 150px;
-    top: 10%;
+    top: 5%;
     /* left: 30%;
     top: 27%; */
     -ms-transform: translate(-50%,
@@ -85,15 +87,12 @@ body{
     -webkit-transform: translate(-50%, -47.5%);
     transform: translate(-50%,
     -47.5%);
-    margin-left: 20%;
-    padding-top: 20%;
     clear: both;
+    margin-left: -5%;
+    margin-top: -10%;
 }
 
-#roll{
-    /* margin-left: 25%; */
-    clear: both;
-}
+
 
 #dice{
     height: 200px;
@@ -142,7 +141,7 @@ ul{
     background-repeat: no-repeat;
     background-size: cover;
     height: 80px;
-    padding-top: 2%;
+    padding-top: 20px;
 }
 
 .terms , .conds{ 
