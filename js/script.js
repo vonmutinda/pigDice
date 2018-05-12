@@ -19,11 +19,11 @@ let outcome = 0;
             clear('#score');
             $('#score').append(score+"<br>");
             if (outcome === play.win) {
-                alert('Woooow ! You Win!');
+                alert(score+': Woooow ! You Win!');
             } 
         }
         else {
-            $('#score').text('');
+            clear('#score');
             outcome = 0;
             $('#antenna').text('0');
             $('#score').append("Ooops ! You rolled 1");
@@ -34,7 +34,7 @@ let outcome = 0;
     });
     
     $().click(function(){
-        
+
     });
 
 
@@ -93,7 +93,7 @@ function spit(calc){
 function spin(score) {
 
     if (score === 1) {
-        $('.one').toggleClass('fa-spin');
+        $('.one').toggleClass('fa-spin').removeClass('fa-spin');
     } else if (score === 2) {
         $('.two').toggleClass('fa-spin');
     } else if (score === 3) {

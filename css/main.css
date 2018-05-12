@@ -1,5 +1,5 @@
 body{
-    font-family: 'Handlee', cursive;
+    font-family: 'Pangolin', cursive;
 }
 
 
@@ -11,13 +11,13 @@ body{
     background-repeat: no-repeat;
     height: 600px;
     padding-top: 70px;
-    margin-bottom: -20px;
     opacity: .9;
     color:white;
     display: none;
 }
 
 .ground{
+    padding: 10px;
 }
 
 .names{
@@ -57,6 +57,11 @@ body{
 .tagline img {
     width: 50px;
     height: 50px;
+    margin: 0;
+}
+
+.tagline h2{
+    margin: 0;
 }
 
 .profile{
@@ -86,7 +91,7 @@ body{
 }
 
 #roll{
-    margin-left: 15%;
+    /* margin-left: 25%; */
     clear: both;
 }
 
@@ -106,6 +111,9 @@ ul{
 
 
 /* FOOTER */
+.social {
+    
+}
 
 .conds span{
     padding-right: 10px;
@@ -117,12 +125,12 @@ ul{
     background: #020001;
     color: white;
     padding:20px;
+    margin: 0;
 }
 
 .social div{
     text-align: center;
     color: green;
-    margin-top: -20px;
 }
 
 .terms{
@@ -138,7 +146,6 @@ ul{
 }
 
 .terms , .conds{ 
-    color: #145A32;
     font-size: 18px;
 }
  /* .facebook h3,.twitter h3,.github h3,.slack h3{
@@ -170,9 +177,9 @@ ul{
     }
 }
 
-.roll {
+/* .roll {
     animation: roll-burst 1s infinity;
-}
+} */
 .animating{
     animation: roll-burst .2s steps(28) 5;
 }
