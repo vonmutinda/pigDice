@@ -24,7 +24,10 @@ body{
 .ground{
     padding: 10px;
     padding-left: 20px;
-
+    background: url('../assets/backgrounds/goldBlack.jpg');
+    background-attachment: fixed;
+    color: wheat;
+    opacity: .9;
 }
 
 .names{
@@ -45,10 +48,6 @@ body{
 /* HEADER */
 .welkom{
     width: 100%;
-}
-
-.field{
-
 }
 
 .tagline{
