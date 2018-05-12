@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 // GLOBAL VARIABLES
 let outcome = 0;
+let income = 0;
 
 
 
@@ -15,50 +16,55 @@ let outcome = 0;
         outcome += score;
 
         console.log(score);
-        spit(outcome);
+        play.clearScreen("#antenna");
+        play.printResult("#antenna",outcome);
+        
 
         if (score > 1) {
-            clear('#score');
+            play.gameOver('#score');
             $('#score').append(score+"<br>");
             if (outcome === play.win) {
                 alert(outcome+': Woooow ! You Win!');
             } 
         }
         else {
-            clear('#score');
+            play.gameOver('#score');
             outcome = 0;
             $('#antenna').text('0');
             $('#score').append("Ooops ! You rolled 1");
-            $('.roll').toggleClass('animating');
+            play.badluck();
         }
-        spin(score);
+        play.spin(score);
         
     });
+
 //player Two
     $('#btnRoll').click(function(){
         let nextPlay = new Dice();
 
-        let score = parseInt(play.roll());
-        outcome += score;
+        let herScore = parseInt(nextPlay.roll());
+        income += herScore;
 
-        console.log(score);
-        spit(outcome);
+        console.log(herScore);
+        nextPlay.clearScreen("#aerial");
+        nextPlay.printResult("#aerial",income);
 
-        if (score > 1) {
-            clear('#scored');
-            $('#score').append(score + "<br>");
-            if (outcome === nextPlay.win) {
-                alert(outcome + ': Woooow ! You Win!');
+
+        if (herScore > 1) {
+            nextPlay.gameOver('#scored');
+            $('#scored').append(herScore + "<br>");
+            if (income === nextPlay.win) {
+                alert(income + ': Woooow ! You Win!');
             }
         }
         else {
-            clear('#score');
-            outcome = 0;
+            nextPlay.gameOver('#scored');
+            income = 0;
             $('#aerial').text('0');
             $('#scored').append("Ooops ! You rolled 1");
-            $('.roll').toggleClass('animating');
+            nextPlay.badluck();
         }
-        spin(score);
+        nextPlay.spin(herScore);
 
     });
 
@@ -77,9 +83,38 @@ function Dice() {
     this.roll = function roll() {
         let num = Math.floor((Math.random() * this.sides) + 1);
         return num;
+    },
+    this.gameOver = function gameOver(where){
+        return $(where).text('');
+    },
+    this.badluck = function badluck() {
+        return $('.roll').toggleClass('animating');
+    },
+    this.printResult = function printResult(here,result) {
+        return $(here).append(result);
+    },
+    this.spin = function spin(score) {
+        if (score === 1) {
+            $('.one').toggleClass('fa-spin').removeClass('fa-spin');
+        } else if (score === 2) {
+            $('.two').toggleClass('fa-spin');
+        } else if (score === 3) {
+            $('.three').toggleClass('fa-spin');
+        } else if (score === 4) {
+            $('.four').toggleClass('fa-spin');
+        } else if (score === 5) {
+            $('.five').toggleClass('fa-spin');
+        } else {
+            $('.six').addClass('fa-spin');
+        }
+    },
+    this.clearScreen = function clearScreen(here) {
+        return $(here).text('');
     }
 
 }
+
+
 
 
 
@@ -92,65 +127,17 @@ function Players(firstPlayer, secondPlayer) {
     }
 }
 
-//function clear 
-
-function clear(where){
-    $(where).text('');
-}
-
-function cleared(){
-
-}
-
-
 
 
 //calculator
-function spit(calc){
-    clear('#antenna');
-    $('#antenna').append(calc);
+// function spit(calc){
+//     clear('#antenna');
+//     $('#antenna').append(calc);
 
-}
-
-
-
-//spin images 
-function spin(score) {
-
-    if (score === 1) {
-        $('.one').toggleClass('fa-spin').removeClass('fa-spin');
-        removeSpin(".one");
-    } else if (score === 2) {
-        $('.two').toggleClass('fa-spin');
-        removeSpin(".two");
-    } else if (score === 3) {
-        $('.three').toggleClass('fa-spin');
-        removeSpin(".three");
-    } else if (score === 4) {
-        $('.four').toggleClass('fa-spin');
-        removeSpin(".four");
-    } else if (score === 5) {
-        $('.five').toggleClass('fa-spin');
-        removeSpin(".five");
-    } else {
-        $('.six').addClass('fa-spin');
-        removeSpin(".six");
-    }
-
-}
-
-//remove spin
-
-function removeSpin(which){
-    $(which).removeClass('.fa-spin');
-}
-
-
-
+// }
 
 
 // EVENT LISTENERS
-
 
 // load playground
 $('#loadGame').click(function () {

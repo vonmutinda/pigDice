@@ -1,3 +1,8 @@
+/*
+AUTHOR  : *******   von MUTINDA *********************
+
+        ********Let There Be Excellence**********
+*/
 body{
     font-family: 'Pangolin', cursive;
 }
@@ -19,7 +24,7 @@ body{
 .ground{
     padding: 10px;
     padding-left: 20px;
-    
+
 }
 
 .names{
@@ -110,10 +115,6 @@ ul{
 
 
 /* FOOTER */
-.social {
-    
-}
-
 .conds span{
     padding-right: 10px;
     padding-left: 10px;
