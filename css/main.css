@@ -5,11 +5,13 @@ body{
 
 /* AGE SELECTION */
 .login{
-    background: url('../assets/backgrounds/goldBlack.jpg');
+    background: url('../assets/backgrounds/bfOne.jpg');
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 700px;
-    padding-top: 100px;
+    height: 600px;
+    padding-top: 70px;
+    margin-bottom: -20px;
     opacity: .9;
     color:white;
 }
@@ -20,12 +22,16 @@ body{
 
 .names{
     padding-left: 20%;
+    padding-top: 10%;
 }
 
 .now{
     padding: 20px;
+    width: 200px;;
+    border-radius: 100px;
     position: absolute;
-    left: 50%;
+    left: 47%;
+    top: 60%;
 }
 
 
@@ -39,13 +45,19 @@ body{
 }
 
 .tagline{
-    padding:50px;
+    padding-top:50px;
     background-image: url("../assets/backgrounds/bfOne.jpg");
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
 
+}
+.tagline img {
+    padding: 0;
+
+    width: 50%;
+    height: 50%;
 }
 
 .profile{
@@ -119,7 +131,9 @@ footer span{
 }
 
 .terms , .conds{
-    background: #27AE60;
+    background:url('../assets/backgrounds/diceTatu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

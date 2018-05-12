@@ -28,12 +28,14 @@
 
     <div class="row tagline">
         <h2>play pigDice - A Game of Thrones</h2>
+        <!-- <img src="assets/backgrounds/theSix.png" alt=""> -->
     </div>
 
 <!-- age specification -->
     <div class="row login">
         <div class="col-md-8 col-md-offset-2">
             <h3 class="text-center">WELCOME! - INPUT NAME TO CONTINUE</h3>
+           
             <div class="row">
                 <div class="col-md-6 names">
                     <h4>PLAYER ONE</h4>
@@ -42,11 +44,11 @@
 
                 <div class="col-md-6 names">
                     <h4>PLAYER ONE</h4>
-                    <input id="playerOne" type="text" placeholder="First Player">
+                    <input id="playerTwo" type="text" placeholder="Second Player">
                 </div>
             </div>
-            <button class="now">Play</button>
         </div>
+        <button id="loadGame" class="now">Play</button>
     </div>
 <!-- end of age selection -->
 <!-- the playground now -->
@@ -66,7 +68,8 @@
                 <div class="col-md-6">
                     
                     <img class="profile" id="firstPlayer" src="assets/boy.png" alt=""> <br>
-                    <h3 id="playerOne">von MUTINDA</h3>
+                    <p id="turnOne">My Turn</p>
+                    <h3 id="pOne"></h3> <br>
                    
 
                     <label for="score">YOU ROLLED :</label> <span id="score"></span>
@@ -76,7 +79,7 @@
                     
                     <img class="profile" id="secondPlayer" src="assets/her.png" alt=""> 
                     <p id="turnTwo"> My Turn </p>
-                    <h3 id="playerTwo">Lydia</h3> <br>
+                    <h3 id="pTwo"></h3> <br>
 
                     
                     <label for="scoreOther">YOU ROLLED :</label><span id="scored"></span>

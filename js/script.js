@@ -2,39 +2,37 @@ $(document).ready(function(){
 
     function Dice() {
         this.win=50;
-        
+
     }
 
-    function Players(name){
-        this.name=name;
+    function Players(firstPlayer,secondPlayer){
+        this.firstPlayer=firstPlayer;
+        this.secondPlayer=secondPlayer;
     }
 
-    let players = {
-        defaults : {
-            playerOne: "von MUTINDA",
-            playerTwo: "Nyamosi"
-        }
-    }
+    // let players = {
+    //     defaults : {
+    //         playerOne: "von MUTINDA",
+    //         playerTwo: "Nyamosi"
+    //     }
+    // }
 
     $('#loadGame').click(function(){
 
-        players.firstPlayer= userOne = $().val();
-         players.secondPlayer = $().val();
+        let players = new Players($('#playerOne').val(), $('#playerTwo').val());
+
+         // load names of players
+         if (firstPlayer !== '' && secondPlayer != '') {
+             $('#pOne').append(players.firstPlayer);
+             $('#pTwo').append(players.secondPlayer);
+         } else {
+             $('#pOne').append(defaults.playerOne);
+             $('#pTwo').append(defaults.playerTwo);
+         }
 
     // hide age section display playground
         $('.login').toggle();
-        $('#playground').show();
-
-
-    // load names of players
-    if(firstPlayer!== '' && secondPlayer!=''){
-        $('#userwan').append(players.firstPlayer);
-        $('#usertoo').append(players.secondPlayer);
-    }else{
-        $().append(defaults.playerOne);
-        $().append(defaults.playerTwo);
-    }
-        
+        $('.ground').show();     
         
 
     });
@@ -62,7 +60,7 @@ $(document).ready(function(){
 
 
 function win(score){
-    for
+    
 
 }
 
