@@ -14,10 +14,10 @@ body{
     margin-bottom: -20px;
     opacity: .9;
     color:white;
+    display: none;
 }
 
 .ground{
-    display: none;
 }
 
 .names{
@@ -46,6 +46,7 @@ body{
 
 .tagline{
     padding-top:50px;
+    padding-bottom: 50px;
     background-image: url("../assets/backgrounds/bfOne.jpg");
     text-align: center;
     background-repeat: no-repeat;
@@ -54,10 +55,8 @@ body{
 
 }
 .tagline img {
-    padding: 0;
-
-    width: 50%;
-    height: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 .profile{
@@ -68,11 +67,12 @@ body{
 /* GAME SECTION */
 .roll{
     background-image: url('../assets/roll.png');
-    /* background-position: left; */
+    background-position: right;
     background-repeat: no-repeat;
     background-size: 2900%;
     height: 150px;
     width: 150px;
+    top: 10%;
     /* left: 30%;
     top: 27%; */
     -ms-transform: translate(-50%,
@@ -80,6 +80,14 @@ body{
     -webkit-transform: translate(-50%, -47.5%);
     transform: translate(-50%,
     -47.5%);
+    margin-left: 20%;
+    padding-top: 20%;
+    clear: both;
+}
+
+#roll{
+    margin-left: 15%;
+    clear: both;
 }
 
 #dice{
@@ -87,9 +95,6 @@ body{
     width: 200px;
 }
 
-#turnTwo , #turnOne{
-    display: none;
-}
 
 
 /* RESULT SECTION */
@@ -101,39 +106,57 @@ ul{
 
 
 /* FOOTER */
-footer{
-    height: 300px;
-}
 
-footer span{
+.conds span{
     padding-right: 10px;
     padding-left: 10px;
 }
 
 .social h2{
     text-align: center;
-    padding: 30px;
-    background: #2C3E50;
+    background: #020001;
     color: white;
+    padding:20px;
 }
 
 .social div{
     text-align: center;
-    height: 50px;
+    color: green;
+    margin-top: -20px;
 }
 
 .terms{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 10px;
     text-align: center;
 
 }
-
-.terms , .conds{
+.conds{
     background:url('../assets/backgrounds/diceTatu.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 80px;
+    padding-top: 2%;
+}
+
+.terms , .conds{ 
+    color: #145A32;
+    font-size: 18px;
+}
+ /* .facebook h3,.twitter h3,.github h3,.slack h3{
+
+ } */
+
+.facebook{
+    background: #3498DB;
+}
+.twitter{
+    background: #5DADE2;
+}
+.github{
+    background: #566573;
+}
+
+.slack{
+    background: seashell;
 }
 
 
@@ -151,5 +174,5 @@ footer span{
     animation: roll-burst 1s infinity;
 }
 .animating{
-    animation: roll-burst 1s steps(28) 1;
+    animation: roll-burst .2s steps(28) 10;
 }

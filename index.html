@@ -23,15 +23,22 @@
           rel="stylesheet">
    
 </head>
+
 <body>
  <div class="container-fluid">
 
     <div class="row tagline">
-        <h2>play pigDice - A Game of Thrones</h2>
+        <img class="one" src="assets/one.png" alt=""> 
+        <img class="two" src="assets/two.png" alt="">
+        <img class="three" src="assets/three.png" alt="">
+        <img class="four" src="assets/foo.png" alt="">
+        <img class="five" src="assets/five.png" alt="">
+        <img class="six" src="assets/six.png" alt="">
+        <h2>play pigDice - A Game of Thrones</h2><br>
         <!-- <img src="assets/backgrounds/theSix.png" alt=""> -->
     </div>
 
-<!-- age specification -->
+<!-- loadGame panel -->
     <div class="row login">
         <div class="col-md-8 col-md-offset-2">
             <h3 class="text-center">WELCOME! - INPUT NAME TO CONTINUE</h3>
@@ -50,7 +57,8 @@
         </div>
         <button id="loadGame" class="now">Play</button>
     </div>
-<!-- end of age selection -->
+<!-- end of loadGame pane -->
+
 <!-- the playground now -->
     <div class="row ground">
  
@@ -61,38 +69,45 @@
 
 
         <!-- players -->
-        <div class="col-md-8 field">
+        <div class="col-md-8 field col-sm-12 col-xs-12 col-lg-8">
 
             <div class="row">
                 <!-- player One -->
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12 col-xs-12">
                     
-                    <img class="profile" id="firstPlayer" src="assets/boy.png" alt=""> <br>
-                    <p id="turnOne">My Turn</p>
+                    <img class="profile" id="firstPlayer" src="assets/boy.png" alt=""> 
                     <h3 id="pOne"></h3> <br>
                    
 
-                    <label for="score">YOU ROLLED :</label> <span id="score"></span>
+                    <label for="score">YOU ROLLED :</label> <br>
+                     <ul id="score" style="list-style-type: none;">
+
+                     </ul>
                 </div>
                 <!-- player Two -->
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12 col-xs-12">
                     
                     <img class="profile" id="secondPlayer" src="assets/her.png" alt=""> 
-                    <p id="turnTwo"> My Turn </p>
                     <h3 id="pTwo"></h3> <br>
 
-                    
-                    <label for="scoreOther">YOU ROLLED :</label><span id="scored"></span>
+                    <label for="scoreOther">YOU ROLLED :</label> <br>
 
+                        <ul id="score" style="list-style-type: none;">
+
+                        </ul>
+                    
                 </div>
 
             </div>
 
             <!-- buttons -->
             <div class="row">
-                <div class="col-md-6">                    
+                <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12 col-lg-8">                    
                      
-                    <img id="dice" src="assets/qmark.png" alt="your roll"> <br>
+                    <!-- <img id="dice" src="assets/qmark.png" alt="your roll"> <br> -->
+                    <div class="roll">
+
+                    </div>
 
 
                     
@@ -100,7 +115,7 @@
 
                 </div>
 
-                <div class="col-md-6"> 
+                <!-- <div class="col-md-6"> 
                     <h3>Result Table</h3>
                     <section>
                         <ul id="resultOne">
@@ -118,7 +133,7 @@
                         </ul>
 
                     </section>
-                </div>
+                </div> -->
             </div>
             <!-- end of buttons -->
 
@@ -130,22 +145,22 @@
     </div>
 <!-- end of playground -->
 
-<footer>
-    <div class="row social">
-        <h2>Follow Developers : </h2>
-        <div class="col-md-3">
-            <i></i>Facebook
+    <div class="row social"> 
+            <h2>Follow Developers : </h2>
+        <div class="col-md-3 facebook col-sm-12 col-xs-12 col-lg-3">
+            <h3>Facebook</h3>
         </div>
-        <div class="col-md-3">
-            <i></i>Twitter
+        <div class="col-md-3 twitter col-sm-12 col-xs-12 col-lg-3">
+            <h3>Twitter</h3>
         </div>
-        <div class="col-md-3">
-            <i></i>GitHub
+        <div class="col-md-3 github col-sm-12 col-xs-12 col-lg-3">
+           <h3>GitHub</h3>
         </div>
-        <div class="col-md-3">
-            <i></i>Slack
+        <div class="col-md-3 slack col-sm-12 col-xs-12 col-lg-3">
+            <h3>Slack</h3>
         </div>    
     </div>
+
     <div class="row conds">
         <div class="col-md-8 col-md-offset-2 terms">
             <span>Terms &amp; Conditions</span>
@@ -155,7 +170,6 @@
             <span>2018</span>
         </div>
     </div>
-</footer>
 
  </div>
     
