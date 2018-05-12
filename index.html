@@ -16,24 +16,41 @@
     <link rel="icon" href="assets/welkom.png">
 
     <!-- fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" 
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Handlee|Maven+Pro|Pacifico|Sacramento|VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Maven+Pro|Pacifico|Sacramento|VT323" 
+          rel="stylesheet">
    
 </head>
 <body>
  <div class="container-fluid">
 
+    <div class="row tagline">
+        <h2>play pigDice - A Game of Thrones</h2>
+    </div>
+
 <!-- age specification -->
     <div class="row login">
+        <div class="col-md-8 col-md-offset-2">
+            <h3 class="text-center">WELCOME! - INPUT NAME TO CONTINUE</h3>
+            <div class="row">
+                <div class="col-md-6 names">
+                    <h4>PLAYER ONE</h4>
+                    <input id="playerOne" type="text" placeholder="First Player">
+                </div>
 
+                <div class="col-md-6 names">
+                    <h4>PLAYER ONE</h4>
+                    <input id="playerOne" type="text" placeholder="First Player">
+                </div>
+            </div>
+            <button class="now">Play</button>
+        </div>
     </div>
 <!-- end of age selection -->
-<div class="row tagline">
-<h2>play pigDice - A Game of Thrones</h2>
-</div>
 <!-- the playground now -->
-    <div class="row">
+    <div class="row ground">
  
         <!-- welcome image -->
         <div class="col-md-4">
@@ -54,11 +71,11 @@
 
                     <label for="score">YOU ROLLED :</label> <span id="score"></span>
                 </div>
-
                 <!-- player Two -->
                 <div class="col-md-6">
                     
-                    <img class="profile" id="secondPlayer" src="assets/her.png" alt="">
+                    <img class="profile" id="secondPlayer" src="assets/her.png" alt=""> 
+                    <p id="turnTwo"> My Turn </p>
                     <h3 id="playerTwo">Lydia</h3> <br>
 
                     
@@ -75,7 +92,7 @@
                     <img id="dice" src="assets/qmark.png" alt="your roll"> <br>
 
 
-                    <div class="roll"></div>
+                    
                     <button id="roll">Roll Dice</button>
 
                 </div>
@@ -86,6 +103,7 @@
                         <ul id="resultOne">
 
                         </ul>
+                        <h3>TOTAL SCORE :</h3> <input id="totalOne" type="text">
                     </section>
 
 

@@ -5,11 +5,28 @@ body{
 
 /* AGE SELECTION */
 .login{
-    display: none;
-
+    background: url('../assets/backgrounds/goldBlack.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    padding-top: 100px;
+    opacity: .9;
+    color:white;
 }
 
+.ground{
+    display: none;
+}
 
+.names{
+    padding-left: 20%;
+}
+
+.now{
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+}
 
 
 /* HEADER */
@@ -39,19 +56,18 @@ body{
 /* GAME SECTION */
 .roll{
     background-image: url('../assets/roll.png');
-    background-position: left;
+    /* background-position: left; */
     background-repeat: no-repeat;
     background-size: 2900%;
     height: 150px;
     width: 150px;
-    left: 50%;
-    top: 50%;
+    /* left: 30%;
+    top: 27%; */
     -ms-transform: translate(-50%,
     -47.5%);
     -webkit-transform: translate(-50%, -47.5%);
     transform: translate(-50%,
     -47.5%);
-    padding-left: 100px;
 }
 
 #dice{
@@ -59,7 +75,9 @@ body{
     width: 200px;
 }
 
-
+#turnTwo , #turnOne{
+    display: none;
+}
 
 
 /* RESULT SECTION */
@@ -119,5 +137,5 @@ footer span{
     animation: roll-burst 1s infinity;
 }
 .animating{
-    animation: roll-burst .8s steps(28) 1;
+    animation: roll-burst 1s steps(28) 1;
 }

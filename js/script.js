@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     function Dice() {
+        this.win=50;
         
     }
 
@@ -42,12 +43,17 @@ $(document).ready(function(){
     $('#roll').click(function(){
         let score = Math.floor((Math.random() * 6) + 1);
 
-
         if(score==1){
-
+            alert('Ooops ! You Rolled 1 .');
+            $('#resultOne').remove();
+            $('#turnTwo').fadeIn();
+        }else{
+            $('#score').append(score);
+            $('ul#resultOne').append('<li>' + score + '</li>');
+            
         }
-        $('#score').append(score);
-        $('ul#resultOne').append('<li>'+score+'</li>');
+        score += score;
+        $('#totalOne').val(score);
        
         
     // clear your score
@@ -55,7 +61,10 @@ $(document).ready(function(){
     });
 
 
+function win(score){
+    for
 
+}
 
 
 //animating the roll button
