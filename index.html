@@ -42,13 +42,21 @@
 
 <!-- loadGame panel -->
     <!-- <div class="row login">
-        <div class="col-md-8 col-md-offset-2">
-            <h3 class="text-center">WELCOME! - INPUT NAME TO CONTINUE</h3>
+
+        <div class="col-md-4">
+            <img class="pig" src="assets/yourscore.png" alt="">
+        </div>
+
+        <div class="col-md-8">
+            <h3 >WELCOME - Start Game !</h3>
            
             <div class="row">
                 <div class="col-md-6 names">
                     <h4>PLAYER ONE</h4>
                     <input id="playerOne" type="text" placeholder="First Player">
+                    <br>
+                    <br>
+                    <button id="loadGame" class="now">Play</button>
                 </div>
 
                 <div class="col-md-6 names">
@@ -57,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <button id="loadGame" class="now">Play</button>
+        
     </div> -->
 <!-- end of loadGame pane -->
 
@@ -75,10 +83,10 @@
 
             <div class="row">
                 <!-- player One -->
-                <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
                     
                     <img class="profile" id="firstPlayer" src="assets/boy.png" alt=""> 
-                    <h3 id="pOne"></h3> <br>
+                    <h3 id="pOne">von MUTINDA</h3> <br>
                    
                     <label>TOTAL : </label> <span id="antenna"></span> <br>
 
@@ -94,7 +102,7 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     
                     <img class="profile" id="secondPlayer" src="assets/her.png" alt=""> 
-                    <h3 id="pTwo"></h3> <br>
+                    <h3 id="pTwo">bERYL nYAMOSI</h3> <br>
                     <label>TOTAL : </label> <span id="aerial"></span> <br>
                     <label for="scoreOther">YOU ROLLED :</label> <br>
 
@@ -110,16 +118,28 @@
 
             <!-- buttons -->
             <div class="row">
-                <div class="col-md-6 col-md-offset-4 col-sm-12 col-xs-12 col-lg-6">                    
-                     
-                    
-                        <div class="roll"></div>
-
+                <div class="col-md-4">
                     
                 </div>
-                    
+                
+                <div class="col-md-4 stackem">
+                    <div class="roll"></div>
+                    <form class="complexity">
+                        <input id="easy" name="challenge" type="radio" checked> Easy
+                        <input id="hard" name="challenge" type="radio"> Hard
+                    </form>
+                </div>
 
-             
+                <div class="col-md-4">
+
+                </div>
+
+                <!-- <div class="col-md-6 col-md-offset-4 col-sm-12 col-xs-12 col-lg-6">                    
+                     
+                  
+
+                    
+                </div> -->
 
                 <!-- <div class="col-md-6"> 
                     <h3>Result Table</h3>

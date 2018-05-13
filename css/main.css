@@ -8,22 +8,25 @@ body{
 }
 
 
-/* AGE SELECTION */
+/* LOGIN SELECTION */
+.pig{
+    width: 100%;
+    height: 500px;
+}
 .login{
-    background: url('../assets/backgrounds/bfOne.jpg');
+    background: url('../assets/backgrounds/goldBlack.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 600px;
-    padding-top: 70px;
+    height: 500px;
+    display: none;
     opacity: .9;
     color:white;
-    display: none;
 }
 
 .ground{
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
     background: url('../assets/backgrounds/goldBlack.jpg');
     background-attachment: fixed;
     color: wheat;
@@ -31,17 +34,13 @@ body{
 }
 
 .names{
-    padding-left: 20%;
     padding-top: 10%;
 }
 
 .now{
     padding: 20px;
-    width: 200px;;
+    width: 200px;
     border-radius: 100px;
-    position: absolute;
-    left: 47%;
-    top: 60%;
 }
 
 
@@ -83,7 +82,7 @@ body{
     background-size: 2900%;
     height: 150px;
     width: 150px;
-    top: 5%;
+    /* top: 5%; */
     /* left: 30%;
     top: 27%; */
     -ms-transform: translate(-50%,
@@ -91,9 +90,8 @@ body{
     -webkit-transform: translate(-50%, -47.5%);
     transform: translate(-50%,
     -47.5%);
-    clear: both;
-    margin-left: -5%;
-    margin-top: -10%;
+    /* margin-left: -5%;
+    margin-top: -10%; */
 }
 
 
@@ -103,7 +101,11 @@ body{
     width: 200px;
 }
 
-
+form{
+    font-size: 18px;
+    margin-top: -20px;
+    margin-left: -50px;
+}
 
 /* RESULT SECTION */
 ul{
@@ -176,9 +178,7 @@ ul{
     }
 }
 
-/* .roll {
-    animation: roll-burst 1s infinity;
-} */
+
 .animating{
     animation: roll-burst .2s steps(28) 5;
 }

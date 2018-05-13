@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 // GLOBAL VARIABLES
 let outcome = 0;
-let income = 0;
+let result = 0;
 
 
 
@@ -12,23 +12,35 @@ let income = 0;
     $('#roll').click(function(){
         let play = new Dice();
 
+        if ($('#easy').is(':checked')) {
+            play.win = 20;
+        }
+        else if ($('#hard').is(':checked')) {
+            play.win = 50;
+        }
+
         let score = parseInt(play.roll());
         outcome += score;
 
         console.log(score);
-        play.clearScreen("#antenna");
+        play.gameOver("#antenna",'');
         play.printResult("#antenna",outcome);
         
 
         if (score > 1) {
-            play.gameOver('#score');
+            play.gameOver('#score','');
             $('#score').append(score+"<br>");
-            if (outcome === play.win) {
-                alert(outcome+': Woooow ! You Win!');
-            } 
+                if (outcome >= play.win) {
+                    play.badluck();
+                    alert(outcome+': Woooow ! You Win!');                    
+                    outcome = 0;
+                    play.gameOver("#score",'');
+                    play.gameOver('#antenna','0');
+
+                } 
         }
         else {
-            play.gameOver('#score');
+            play.gameOver('#score','');
             outcome = 0;
             $('#antenna').text('0');
             $('#score').append("Ooops ! You rolled 1");
@@ -42,25 +54,34 @@ let income = 0;
     $('#btnRoll').click(function(){
         let nextPlay = new Dice();
 
+        if($('#easy').is(':checked')){
+            nextPlay.win = 20;
+        }
+        else if ($('#hard').is(':checked')){
+            nextPlay.win = 50;
+        }
+
         let herScore = parseInt(nextPlay.roll());
-        income += herScore;
+        result += herScore;
 
         console.log(herScore);
-        nextPlay.clearScreen("#aerial");
-        nextPlay.printResult("#aerial",income);
+        nextPlay.gameOver("#aerial",'');
+        nextPlay.printResult("#aerial",result);
 
-
+        // logic(nextPlay,herScore,result,'#aerial','#scored');
         if (herScore > 1) {
-            nextPlay.gameOver('#scored');
+            nextPlay.gameOver('#scored','');
             $('#scored').append(herScore + "<br>");
-            if (income === nextPlay.win) {
-                alert(income + ': Woooow ! You Win!');
-            }
+                if (result >= nextPlay.win) {
+                    alert( result+ ': Woooow ! You Win!');
+                    result = 0;
+                    nextPlay.clearScreen("#aerial");
+                }
         }
         else {
-            nextPlay.gameOver('#scored');
-            income = 0;
-            $('#aerial').text('0');
+            nextPlay.gameOver('#scored','');
+            result = 0;
+            nextPlay.gameOver("#antenna",'0');
             $('#scored').append("Ooops ! You rolled 1");
             nextPlay.badluck();
         }
@@ -79,13 +100,13 @@ let income = 0;
 
 function Dice() {
     this.sides = 6;
-    this.win = 50;
+    this.win = 20;
     this.roll = function roll() {
         let num = Math.floor((Math.random() * this.sides) + 1);
         return num;
     },
-    this.gameOver = function gameOver(where){
-        return $(where).text('');
+    this.gameOver = function gameOver(where,what){
+        return $(where).text(what);
     },
     this.badluck = function badluck() {
         return $('.roll').toggleClass('animating');
@@ -95,7 +116,7 @@ function Dice() {
     },
     this.spin = function spin(score) {
         if (score === 1) {
-            $('.one').toggleClass('fa-spin').removeClass('fa-spin');
+            $('.one').toggleClass('fa-spin');
         } else if (score === 2) {
             $('.two').toggleClass('fa-spin');
         } else if (score === 3) {
@@ -107,33 +128,40 @@ function Dice() {
         } else {
             $('.six').addClass('fa-spin');
         }
-    },
-    this.clearScreen = function clearScreen(here) {
-        return $(here).text('');
     }
 
 }
-
-
 
 
 
 function Players(firstPlayer, secondPlayer) {
     this.firstPlayer = firstPlayer;
     this.secondPlayer = secondPlayer;
-    this.theDefaults = {
-        fhirst: 'vonMUTINDA',
-        second: 'bERYLnYAMOSI'
-    }
+}
+
+let defaultPlayers = {
+    fhirst: 'vonMUTINDA',
+    second: 'bERYLnYAMOSI'
 }
 
 
-
-//calculator
-// function spit(calc){
-//     clear('#antenna');
-//     $('#antenna').append(calc);
-
+// function logic(whichPlayer,score,result,where,put){
+//     if (score > 1) {
+//         whichPlayer.gameOver(put, '');
+//         $(where).append(score);
+//         if (result >= whichPlayer.win) {
+//             result = 0;
+//             alert(result + ': Woooow ! You Win!');
+//             whichPlayer.clearScreen(where);
+//         }
+//     }
+//     else {
+//         whichPlayer.gameOver(put, '');
+//         result = 0;
+//         whichPlayer.gameOver(where, '0');
+//         $(put).append("Ooops ! You rolled 1");
+//         whichPlayer.badluck();
+//     }
 // }
 
 
@@ -145,17 +173,17 @@ $('#loadGame').click(function () {
     let players = new Players($('#playerOne').val(), $('#playerTwo').val());
 
     // load names of players
-    if (firstPlayer !== '' && secondPlayer != '') {
+    if (firstPlayer ==='' || secondPlayer === '') {
+        $('#pOne').append(defaultPlayers.fhirst);
+        $('#pTwo').append(defaultPlayers.second);
+    } else {
         $('#pOne').append(players.firstPlayer);
         $('#pTwo').append(players.secondPlayer);
-    } else {
-        $('#pOne').append(players.theDefaults.fhirst);
-        $('#pTwo').append(players.defaults.second);
     }
 
     // hide login & display playground
     $('.login').toggle();
-    $('.ground').show();
+    $('.ground').toggle();
 
 
 });
