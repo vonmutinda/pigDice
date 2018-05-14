@@ -28,9 +28,9 @@ body{
 .ground{
     padding: 10px;
     padding-left: 10px;
-    background: url('../assets/backgrounds/goldBlack.jpg');
+    background: url('../assets/action.png');
     background-attachment: fixed;
-    color: wheat;
+    color: white;
     opacity: .9;
 }
 
