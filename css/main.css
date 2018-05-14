@@ -5,6 +5,7 @@ AUTHOR  : *******   von MUTINDA *********************
 */
 body{
     font-family: 'Pangolin', cursive;
+    font-size: 18px;
 }
 
 
@@ -29,9 +30,7 @@ body{
     padding: 10px;
     padding-left: 10px;
     background: url('../assets/action.png');
-    background-attachment: fixed;
     color: white;
-    opacity: .9;
 }
 
 .names{
@@ -68,6 +67,8 @@ body{
 
 .tagline h2{
     margin: 0;
+    font-family: 'Special Elite', cursive;
+    padding-top: 20px;
 }
 
 .profile{
@@ -97,7 +98,15 @@ button{
     margin-top: -12%;
 }
 
-
+#pOne , #pTwo{
+    padding:10px;
+    width: 50%;
+    text-align: center;
+    border-radius: 25px 100px;
+    background-color: #fff;
+    border: 3px double #1da1f2;
+    color: black;
+}
 
 #dice{
     height: 200px;
@@ -120,7 +129,7 @@ ul{
 
 /* FOOTER */
 .social h2{
-    font-family: Pangolin 'cursive';
+    font-family: 'Cabin Sketch' 'cursive';
     text-align: center;
     background:black;
     color: white;
@@ -136,6 +145,8 @@ ul{
     background-color: #fff;
     border: 3px double #1da1f2;
     color: #1da1f2;
+    margin-top:2px;
+    margin-bottom: 2px;
 }
 
 .terms{
@@ -185,6 +196,7 @@ ul{
     to {
         background-position: right;
     }
+    
 }
 
 
