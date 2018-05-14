@@ -76,6 +76,11 @@ body{
 }
 
 /* GAME SECTION */
+button{
+    background-color: #fff;
+    border: 3px double #1da1f2;
+    color: #1da1f2;
+}
 .roll{
     background-image: url('../assets/roll.png');
     background-position: right;
@@ -125,12 +130,11 @@ ul{
 }
 
 .social div{
-    border: double;
     border-radius: 100px;
     text-align: center;
     padding: 20px;
     background-color: #fff;
-    border: 1px solid #1da1f2;
+    border: 3px double #1da1f2;
     color: #1da1f2;
 }
 
