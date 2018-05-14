@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" 
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Pangolin|Special+Elite|Pacifico|Sacramento|Cabin+Sketch" 
+    <link href="https://fonts.googleapis.com/css?family=Pangolin|Special+Elite|Pacifico|Sacramento|Cabin+Sketch|" 
           rel="stylesheet">
 
     <!-- necessary css -->    
@@ -36,10 +36,7 @@
         <img class="four" src="assets/foo.png" alt="">
         <img class="five" src="assets/five.png" alt="">
         <img class="six" src="assets/six.png" alt="">
-
-       
         <h2>play pigDice - A Game of Bro's  <i class="fa fa-gitlab" style="color:white"></i></h2> 
-        <!-- <img src="assets/cool.jpg" alt=""> -->
     </div>
 
 <!-- loadGame panel -->
@@ -81,63 +78,64 @@
 
 
         <!-- players -->
-        <div class="col-md-8 field col-sm-12 col-xs-12 col-lg-8">
+        <div class="col-md-8 col-sm-12 col-xs-12 col-lg-8">
 
             <div class="row">
                 <!-- player One -->
-                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4">
                     
                     <img class="profile" id="firstPlayer" src="assets/boy.png" alt=""> 
                     <h3 id="pOne">von MUTINDA</h3> <br>
                    
-                    <label>TOTAL : </label> <span id="antenna"></span> <br>
+                    <label>TOTAL : </label> <span id="antenna"></span> <br><br>
 
                     <label for="score">YOU ROLLED :</label> <br>
                      <ul id="score" style="list-style-type: none;">
 
                      </ul>
 
-                     <br>
                      <button style="color:black" class="btn-lg" id="roll">Roll Dice</button>
                 </div>
+
+
+                <div class="col-md-4 col-xs-12 col-sm-12 col-lg-4">
+                    <div class="roll"></div> <br>
+                    <form class="complexity">
+                        <input id="easy" name="challenge" type="radio" checked> Easy
+
+                        <input id="hard" name="challenge" type="radio"> Hard
+                    </form>
+                </div>
+
+
+
                 <!-- player Two -->
-                <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4">
                     
                     <img class="profile" id="secondPlayer" src="assets/her.png" alt=""> 
                     <h3 id="pTwo">bERYL nYAMOSI</h3> <br>
-                    <label>TOTAL : </label> <span id="aerial"></span> <br>
+                    <label>TOTAL : </label> <span id="aerial"></span> <br><br>
                     <label for="scoreOther">YOU ROLLED :</label> <br>
 
                         <ul id="scored" style="list-style-type: none;">
 
                         </ul>
-                        <br>
                         <button style="color:black;" class="btn-lg" id="btnRoll">Roll Dice</button>
                     
-                </div>
+                    </div>
 
             </div>
 
             <!-- buttons -->
-            <div class="row">
-                <div class="col-md-4">
-                    
-                </div>
-                
-                <div class="col-md-4">
+            <!-- <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12 col-lg 12 settings">
                     <div class="roll"></div>
                     <form class="complexity">
                         <input id="easy" name="challenge" type="radio" checked> Easy
                         <input id="hard" name="challenge" type="radio"> Hard
                     </form>
                 </div>
-
-                <div class="col-md-4">
-
-                </div>
-
-                
-            </div>
+            </div> -->
             <!-- end of buttons -->
 
         </div>
@@ -149,19 +147,7 @@
 <!-- end of playground -->
 
     <div class="row social"> 
-            <h2>Follow Developers : <i class="fa fa-blind"></i> </h2>
-        <!-- <div class="col-md-3 facebook col-sm-12 col-xs-12 col-lg-3">
-            <a href="https://fb.com/vonmutinda">Facebook</a>
-        </div>
-        <div class="col-md-3 twitter col-sm-12 col-xs-12 col-lg-3">
-            <a href="https://twitter.com/vonmutinda">Twitter</a>
-        </div>
-        <div class="col-md-3 github col-sm-12 col-xs-12 col-lg-3">
-           <a href="https://vonmutinda.github.io">GitHub</a> 
-        </div>
-        <div class="col-md-3 slack col-sm-12 col-xs-12 col-lg-3">
-            <a href="https://moringaschool.slack/vonmutinda">Slack</a>
-        </div>     -->
+            <h2 style="font-family: 'Cabin Sketch',cursive">Follow Developers : <i class="fa fa-blind"></i> </h2>
         <div class="col-md-3">
             <a href="https://github.com/vonmutinda"></a>
                 <i class="fa fa-github" style="font-size:36px; color: black"></i> GitHub</a>
@@ -176,7 +162,7 @@
         </div>
         <div class="col-md-3">
             <a href="https://moringaschool.slack.com/vonmutinda">
-                <i class="fa fa-slack" style="font-size:36px"></i>  Slack</a>
+<i class="fa fa-slack" style="font-size:36px;color: #4A235A"></i> Slack</a>
         </div>
     </div>
 
