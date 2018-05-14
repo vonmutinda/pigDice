@@ -8,6 +8,7 @@ body{
 }
 
 
+
 /* LOGIN SELECTION */
 .pig{
     width: 100%;
@@ -82,16 +83,13 @@ body{
     background-size: 2900%;
     height: 150px;
     width: 150px;
-    /* top: 5%; */
-    /* left: 30%;
-    top: 27%; */
+    top: 5%;
     -ms-transform: translate(-50%,
     -47.5%);
     -webkit-transform: translate(-50%, -47.5%);
     transform: translate(-50%,
     -47.5%);
-    /* margin-left: -5%;
-    margin-top: -10%; */
+    margin-top: -12%;
 }
 
 
@@ -103,7 +101,7 @@ body{
 
 form{
     font-size: 18px;
-    margin-top: -20px;
+    /* margin-top: -20px; */
     margin-left: -50px;
 }
 
@@ -116,28 +114,35 @@ ul{
 
 
 /* FOOTER */
-.conds span{
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
 .social h2{
+    font-family: Pangolin 'cursive';
     text-align: center;
-    background: #020001;
+    background:black;
     color: white;
-    padding:20px;
+    padding:10px;
     margin: 0;
+    border: solid double white;
 }
 
 .social div{
+    border: double;
+    border-radius: 100px;
     text-align: center;
-    color: green;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
 }
 
 .terms{
     text-align: center;
-
 }
+
+.terms a , .social a{
+    padding: 10px;
+    text-decoration: none;
+}
+
 .conds{
     background:url('../assets/backgrounds/diceTatu.jpg');
     background-repeat: no-repeat;

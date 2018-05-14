@@ -10,6 +10,8 @@
 + 
     1. **NAME** : MAXWELL von MUTINDA
     2. **EMAIL**: maxwellmutinda@outlook.com
+#RULES
++ 
 
 #TECHNOLOGIES
 

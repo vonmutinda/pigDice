@@ -81,7 +81,7 @@ let result = 0;
         else {
             nextPlay.gameOver('#scored','');
             result = 0;
-            nextPlay.gameOver("#antenna",'0');
+            nextPlay.gameOver("#aerial",'0');
             $('#scored').append("Ooops ! You rolled 1");
             nextPlay.badluck();
         }
