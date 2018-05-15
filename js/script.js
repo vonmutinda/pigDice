@@ -10,11 +10,10 @@ let result = 0;
 
 //player One
     $('#roll').click(function () {
-        // $('#boo').removeClass('active');
-        // $('#bae').addClass('active');
         let play = new Dice();
 
-        play.playing("#bae","#boo");
+        play.playing("#bae","#boo"); //show active player
+        play.gameOver("#screen"," "); //scrub previous game's winner
 
         if ($('#easy').is(':checked')) {
             play.win = 20;
@@ -36,7 +35,8 @@ let result = 0;
             $('#score').append(score+"<br>");
                 if (outcome >= play.win) {
                     play.badluck();
-                    alert(outcome+': Woooow ! You Win!');                    
+                    // alert(outcome+': Woooow ! You Win!'); 
+                    $('#screen').text(' Woow ! MUTINDA You Win!');
                     outcome = 0;
                     play.gameOver("#score",'');
                     play.gameOver('#antenna','0');
@@ -56,11 +56,10 @@ let result = 0;
 
 //player Two
     $('#btnRoll').click(function(){
-        // $('#bae').removeClass('active');
-        // $('#boo').addClass('active');
         let nextPlay = new Dice();
 
-        nextPlay.playing('#boo','#bae')
+        nextPlay.gameOver("#screen",''); //scrub previous game's winner
+        nextPlay.playing('#boo','#bae') //show active player
 
         if($('#easy').is(':checked')){
             nextPlay.win = 20;
@@ -81,9 +80,11 @@ let result = 0;
             nextPlay.gameOver('#scored','');
             $('#scored').append(herScore + "<br>");
                 if (result >= nextPlay.win) {
-                    alert( result+ ': Woooow ! You Win!');
+                    // alert( result+ ': Woooow ! You Win!');
+                    $('#screen').text('Woow ! BERYL You Win!');
                     result = 0;
-                    nextPlay.clearScreen("#aerial");
+                    nextPlay.gameOver("#aerial",'0');
+                    nextPlay.gameOver('#scored','');
                 }
         }
         else {
@@ -98,11 +99,18 @@ let result = 0;
     });
 
     //start Game 
-$().click(function () {
+$("#start").click(function () {
     let newGame = new Dice();
 
-    newGame.clearScreen();
-    newGame.clearScreen();
+    newGame.gameOver("#screen"," ");
+    newGame.gameOver("#antenna",'0');
+    newGame.gameOver("#aerial",'0');
+
+    newGame.gameOver("#score",'');
+    newGame.gameOver("#scored",'');
+
+    $('#bae').removeClass('active');
+    $('#boo').removeClass('active');
 });
 
 

@@ -77,31 +77,30 @@ body{
 }
 
 /* GAME SECTION */
-/* .active{
-    padding: 0;
-    margin: 0;
-} */
 .inactive{
     padding: 10px;
     /* margin-top: -11px;
     margin-bottom: -34px; */
 }
 .active{
-    background:url('../assets/backgrounds/active.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: .8;
-    border-radius: 10px; 
+    /* background:url('../assets/backgrounds/active.jpg'); */
+    /* border: 3px solid black; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background: #fff; */
+    /* color: black; */
+    opacity: .7;
+    /* border-radius: 10px;  */
     /* padding: 20px;  */
 }
 .active:hover{
-    opacity: .7;
+    opacity: .8;
     transition: .2s ease;
 }
 
 button#roll, #btnRoll{
     background-color: #fff;
-    border: 3px double #1da1f2;
+    border: 3px solid #1da1f2;
     color: #1da1f2;
 }
 .roll{
