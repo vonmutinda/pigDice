@@ -158,8 +158,8 @@ function Dice() {
         }
     },
     this.playing = function playing(whos,withwhom) {
-        $(whos).addClass('active');
-        $(withwhom).removeClass('active');
+        $(withwhom).addClass('active');
+        $(whos).removeClass('active');
     }
 
 }
