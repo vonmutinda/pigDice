@@ -72,7 +72,7 @@
     <div class="row ground">
  
         <!-- welcome image -->
-        <div class="col-md-4">
+        <div class="col-md-4 inactive">
             <img class="welkom" src="assets/welkom.png" alt="pigDice">
         </div>
 
@@ -82,7 +82,7 @@
 
             <div class="row">
                 <!-- player One -->
-                <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4">
+                <div id="bae" class="col-md-4 col-sm-12 col-xs-12 col-lg-4 inactive">
                     
                     <img class="profile" id="firstPlayer" src="assets/boy.png" alt=""> 
                     <h3 id="pOne">von MUTINDA</h3> <br>
@@ -98,26 +98,34 @@
                 </div>
 
 
-                <div class="col-md-4 col-xs-12 col-sm-12 col-lg-4">
-                    <div class="roll"></div> <br>
+                <div class="col-md-4 col-xs-12 col-sm-12 col-lg-4 inactive">
+                    <div class="roll"></div> 
+                    <img id="image" src="" alt="">
+                    <br><br>
                     <form class="complexity">
                         <input id="easy" name="challenge" type="radio" checked> Easy
 
                         <input id="hard" name="challenge" type="radio"> Hard
-                    </form>
+                    </form> <br>
+                    <button style="width: 100%;
+                                   border-radius: 10px;
+                                   background: #1da1f2;
+                                   border: none " class="btn-lg"> Start Game  <i class="fa fa-plus"></i>
+
+                    </button>
                 </div>
 
 
 
                 <!-- player Two -->
-                <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4">
+                <div id="boo" class="col-md-4 col-sm-12 col-xs-12 col-lg-4 inactive">
                     
                     <img class="profile" id="secondPlayer" src="assets/her.png" alt=""> 
                     <h3 id="pTwo">bERYL nYAMOSI</h3> <br>
                     <label>TOTAL : </label> <span id="aerial"></span> <br><br>
                     <label for="scoreOther">YOU ROLLED :</label> <br>
 
-                        <ul id="scored" style="list-style-type: none;">
+                        <ul id="scored" style="list-style-type: none; ">
 
                         </ul>
                         <button style="color:black;" class="btn-lg" id="btnRoll">Roll Dice</button>

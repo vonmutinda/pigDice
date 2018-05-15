@@ -28,7 +28,6 @@ body{
 
 .ground{
     padding: 10px;
-    padding-left: 10px;
     background: url('../assets/action.png');
     color: white;
     text-align: center;
@@ -78,37 +77,62 @@ body{
 }
 
 /* GAME SECTION */
-button{
+/* .active{
+    padding: 0;
+    margin: 0;
+} */
+.inactive{
+    padding: 10px;
+    /* margin-top: -11px;
+    margin-bottom: -34px; */
+}
+.active{
+    background:url('../assets/backgrounds/active.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .8;
+    border-radius: 10px; 
+    /* padding: 20px;  */
+}
+.active:hover{
+    opacity: .7;
+    transition: .2s ease;
+}
+
+button#roll, #btnRoll{
     background-color: #fff;
     border: 3px double #1da1f2;
     color: #1da1f2;
 }
 .roll{
-    /* position: absolute; */
     background-image: url('../assets/roll.png');
     background-position: right;
     background-repeat: no-repeat;
     background-size: 2900%;
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
     -ms-transform: translate(-50%,
     -47.5%);
     -webkit-transform: translate(-50%, -47.5%);
     transform: translate(-50%,
     -47.5%);
     clear: both;
-    margin-top: 40%;
+    margin-top: 20%;
     margin-left: 50%;
 }
 
 #pOne , #pTwo{
     padding:10px;
+    margin-left: 15px;
     width: 90%;
     text-align: center;
-    border-radius: 25px 100px;
+    border-radius: 10px;
     background-color: #fff;
-    border: 3px double #1da1f2;
+    /* border: 3px double #1da1f2; */
     color: black;
+
+    border: 1px solid #1da1f2;
+    border-width: thick;
 }
 
 #dice{
@@ -117,13 +141,12 @@ button{
 }
 
 .settings{
-    /* position: relative; */
-    height: 90%;
+    /* height: 90%; */
 }
 form{
     clear: both;
     padding: 10px;
-    margin-top: -1%;
+    /* margin-top: 1%; */
     background-color:black;
     border: solid 1px #1da1f2;
     border-radius: 10px;
@@ -135,6 +158,12 @@ input{
     width: 20px;
     padding: 10px;
 }
+
+#image{
+    height: 150px;
+    width: 150px;
+}
+
 
 /* RESULT SECTION */
 ul{
@@ -163,13 +192,15 @@ ul{
 }
 
 .social div{
+    height: auto;
     border-radius: 100px;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
-    border: 3px double #1da1f2;
+    border: 1px double #1da1f2;
+    border-width: thick;
     color: #1da1f2;
-    margin-top:2px;
+    margin-top: 2px;
     margin-bottom: 2px;
 }
 

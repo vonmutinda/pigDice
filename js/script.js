@@ -9,8 +9,12 @@ let result = 0;
 //GAME
 
 //player One
-    $('#roll').click(function(){
+    $('#roll').click(function () {
+        // $('#boo').removeClass('active');
+        // $('#bae').addClass('active');
         let play = new Dice();
+
+        play.playing("#bae","#boo");
 
         if ($('#easy').is(':checked')) {
             play.win = 20;
@@ -52,7 +56,11 @@ let result = 0;
 
 //player Two
     $('#btnRoll').click(function(){
+        // $('#bae').removeClass('active');
+        // $('#boo').addClass('active');
         let nextPlay = new Dice();
+
+        nextPlay.playing('#boo','#bae')
 
         if($('#easy').is(':checked')){
             nextPlay.win = 20;
@@ -89,7 +97,13 @@ let result = 0;
 
     });
 
+    //start Game 
+$().click(function () {
+    let newGame = new Dice();
 
+    newGame.clearScreen();
+    newGame.clearScreen();
+});
 
 
 
@@ -117,17 +131,27 @@ function Dice() {
     this.spin = function spin(score) {
         if (score === 1) {
             $('.one').toggleClass('fa-spin');
+            $('#image').attr("src","assets/one.png");
         } else if (score === 2) {
             $('.two').toggleClass('fa-spin');
+            $('#image').attr("src", "assets/two.png");
         } else if (score === 3) {
             $('.three').toggleClass('fa-spin');
+            $('#image').attr("src", "assets/three.png");
         } else if (score === 4) {
             $('.four').toggleClass('fa-spin');
+            $('#image').attr("src", "assets/foo.png");
         } else if (score === 5) {
             $('.five').toggleClass('fa-spin');
+            $('#image').attr("src", "assets/five.png");
         } else {
             $('.six').addClass('fa-spin');
+            $('#image').attr("src", "assets/six.png");
         }
+    },
+    this.playing = function playing(whos,withwhom) {
+        $(whos).addClass('active');
+        $(withwhom).removeClass('active');
     }
 
 }
