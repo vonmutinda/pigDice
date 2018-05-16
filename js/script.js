@@ -100,6 +100,9 @@ let result = 0;
 
     //start Game 
 $("#start").click(function () {
+    outcome = 0;
+    result = 0;
+    $('#image').attr("src","assets/loading.png");
     let newGame = new Dice();
 
     newGame.gameOver("#screen"," ");
