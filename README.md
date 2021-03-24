@@ -6,10 +6,9 @@
 #AUTHOR
 
 + Student at Moringa School .
-+ Software Engineer , Concept Builder , Innovator , Film Director , Writer etc.
++ Software Engineer.
 + 
-    1. **NAME** : MAXWELL von MUTINDA
-    2. **EMAIL**: maxwellmutinda@outlook.com
+    1. **NAME** : MAXWELL von MUTINDA 
 #RULES
 + 
 
